@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <nav class="nav-wrapper">
+        <div class="nav-content">
+            <img class="logo" src="path/to/angel3.png" alt="Logo" />
+
+            <ul>
+                <li id="home-section"><a class="menu-item" href="#home-section">Home</a></li>
+                <li id="skills-section"><a class="menu-item" href="#skills-section">Skills</a></li>
+                <li id="work-section"><a class="menu-item" href="#work-section">Work Experience</a></li>
+                <li id="projects-section"><a class="menu-item" href="#projects-section">Projects</a></li>
+                <li id="contact-section"><a class="menu-item" href="#contact-section">Contact Me</a></li>
+
+                <div class="btns">
+                    <button class="contact-btn" onclick="scrollToContact()">Hire Me</button>
+                    <a href="./Neema_Mwende_Resume.pdf" download>
+                        <button class="contact-btnn">Resume</button>
+                    </a>
+                </div>  
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                <span class="material-symbols-outlined" style="font-size:1.8rem;">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" onclick="toggleMenu()">
+        <div class="mobile-menu-container">
+            <img class="logo" src="path/to/logo2.jpeg" alt="Logo" />
+
+            <ul>
+                <li><a class="menu-item" href="#home-section">Home</a></li>
+                <li><a class="menu-item" href="#skills-section">Skills</a></li>
+                <li><a class="menu-item" href="#projects-section">Projects</a></li>
+                <li><a class="menu-item" href="#work-section">Work Experience</a></li>
+                <li><a class="menu-item" href="#contact-section">Contact Me</a></li>
+                <button class="contact-btn" id="contact" onclick="scrollToContact()">Hire Me</button>
+            </ul>
+        </div>
+    </div>
+
+    <!-- BIO -->
+    <section class="hero-container" id="home-section">
+        <div class="hero-content slide-card">
+            <h2>Building Digital <span>Experiences</span> That Inspire</h2>
+            <p>Passionate Full Stack Developer | Transforming Ideas into Seamless and Visually Stunning Web Solutions</p>
+        </div>
+        <div class="hero-img slide-card">
+            <img src="path/to/image1.jpg" alt="Profile" class="profile-img" />
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isOpen = mobileMenu.classList.contains('active');
+            mobileMenu.classList.toggle('active', !isOpen);
+
+            const menuBtn = document.querySelector('.menu-btn span');
+            menuBtn.textContent = isOpen ? 'menu' : 'close';
+        }
+
+        function scrollToContact() {
+            const contactSection = document.getElementById('contact-section');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
