@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 <body>
     <nav class="nav-wrapper">
         <div class="nav-content">
-            <img class="logo" src="path/to/angel3.png" alt="Logo" />
-
+            <img class="logo" src="../may-2024-web-hackathon-1/Images/angel3.png" alt="Logo" />
             <ul>
                 <li id="home-section"><a class="menu-item" href="#home-section">Home</a></li>
                 <li id="skills-section"><a class="menu-item" href="#skills-section">Skills</a></li>
                 <li id="work-section"><a class="menu-item" href="#work-section">Work Experience</a></li>
                 <li id="projects-section"><a class="menu-item" href="#projects-section">Projects</a></li>
                 <li id="contact-section"><a class="menu-item" href="#contact-section">Contact Me</a></li>
-
                 <div class="btns">
                     <button class="contact-btn" onclick="scrollToContact()">Hire Me</button>
                     <a href="./Neema_Mwende_Resume.pdf" download>
                         <button class="contact-btnn">Resume</button>
                     </a>
-                </div>  
+                </div>
             </ul>
-
             <button class="menu-btn" onclick="toggleMenu()">
                 <span class="material-symbols-outlined" style="font-size:1.8rem;">menu</span>
             </button>
         </div>
     </nav>
-
     <div class="mobile-menu" id="mobile-menu" onclick="toggleMenu()">
         <div class="mobile-menu-container">
-            <img class="logo" src="path/to/logo2.jpeg" alt="Logo" />
-
+            <img class="logo" src="../may-2024-web-hackathon-1/Images/logo2.jpeg" alt="Logo" />
             <ul>
                 <li><a class="menu-item" href="#home-section">Home</a></li>
                 <li><a class="menu-item" href="#skills-section">Skills</a></li>
@@ -46,7 +43,6 @@
             </ul>
         </div>
     </div>
-
     <!-- BIO -->
     <section class="hero-container" id="home-section">
         <div class="hero-content slide-card">
@@ -54,132 +50,171 @@
             <p>Passionate Full Stack Developer | Transforming Ideas into Seamless and Visually Stunning Web Solutions</p>
         </div>
         <div class="hero-img slide-card">
-            <img src="path/to/image1.jpg" alt="Profile" class="profile-img" />
+            <img src="../may-2024-web-hackathon-1/Images/image1.jpg" alt="Profile" class="profile-img" />
         </div>
     </section>
-
     <!-- EXPERIENCE CARD -->
     <div id="experience-container">
         <!-- Experience cards will be injected here by JavaScript -->
     </div>
-
-    <script src="data.js"></script>
-    <script src="experience-script.js"></script>
-
-
     <!-- SKILLS -->
     <section id="skills-section" class="skills-container">
         <div class="sliding-card">
-          <h5>Technical Proficiency</h5>
+            <h5>Technical Proficiency</h5>
         </div>
         <div class="sliding-card">
-          <div class="skills-content">
-            <div class="skills" id="skills"></div>
-            <div class="skills-info" id="skills-info"></div>
-          </div>
+            <div class="skills-content">
+                <div class="skills" id="skills"></div>
+            </div>
         </div>
-      </section>
-    
-      <script src="data.js"></script>
-      <script src="scripts.js"></script>
-
+    </section>
     <!-- WORK EXPERIENCE  -->
     <section id="work-section" class="experience-container">
         <div class="sliding-card">
-          <h5>Work Experience</h5>
+            <h5>Work Experience</h5>
         </div>
         <div class="sliding-card">
-          <div class="experience-content">
-            <div class="arrows">
-              <div class="arrow-right">&gt;</div>
-              <div class="arrow-left">&lt;</div>
+            <div class="experience-content">
+                <div class="arrows">
+                    <div class="arrow-right">&gt;</div>
+                    <div class="arrow-left">&lt;</div>
+                </div>
+                <div id="experience-slider" class="slider">
+                    <!-- Experience cards will be injected here by JavaScript -->
+                </div>
             </div>
-            <div class="slider">
-              <!-- Assuming ExperienceCard equivalent static HTML goes here -->
-              <div class="experience-card">
-                <!-- Replace with actual experience details -->
-                <h3>Job Title</h3>
-                <p>Company</p>
-                <p>Duration</p>
-                <p>Description</p>
-              </div>
-              <div class="experience-card">
-                <!-- Replace with actual experience details -->
-                <h3>Job Title</h3>
-                <p>Company</p>
-                <p>Duration</p>
-                <p>Description</p>
-              </div>
-              <!-- Add more experience cards as needed -->
-            </div>
-          </div>
         </div>
-      </section>
-    
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-      <script>
-        $(document).ready(function(){
-          $('.slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: false,
-            responsive: [
-              {
-                breakpoint: 1025,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-            ]
-          });
-    
-          $('.arrow-right').click(function(){
-            $('.slider').slick('slickNext');
-          });
-    
-          $('.arrow-left').click(function(){
-            $('.slider').slick('slickPrev');
-          });
-        });
-      </script>
-
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects-section" class="projects-container">
+        <div class="arrow-right">&gt;</div>
+        <div class="arrow-left">&lt;</div>
+        <div class="sliding-card">
+            <div class="projects-info">
+                <h5>My Projects</h5>
+                <div class="slider">
+                    <div class="project-slide projects">
+                        <img src="../may-2024-web-hackathon-1/Images/movie.png" alt="Project 1">
+                        <div class="information">
+                            <span><h3>Project 1</h3></span>
+                            <p>Description of project 1</p>
+                            <a href="link_to_project1" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-slide projects">
+                        <img src="../may-2024-web-hackathon-1/Images/hotel.png" alt="Project 2">
+                        <div class="information">
+                            <span><h3>Project 2</h3></span>
+                            <p>Description of project 2</p>
+                            <a href="link_to_project2" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-slide projects">
+                        <img src="../may-2024-web-hackathon-1/Images/hotel.png" alt="Project 2">
+                        <div class="information">
+                            <span><h3>Project 2</h3></span>
+                            <p>Description of project 2</p>
+                            <a href="link_to_project2" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-slide projects">
+                        <img src="../may-2024-web-hackathon-1/Images/hotel.png" alt="Project 2">
+                        <div class="information">
+                            <span><h3>Project 2</h3></span>
+                            <p>Description of project 2</p>
+                            <a href="link_to_project2" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-slide projects">
+                        <img src="../may-2024-web-hackathon-1/Images/hotel.png" alt="Project 2">
+                        <div class="information">
+                            <span><h3>Project 2</h3></span>
+                            <p>Description of project 2</p>
+                            <a href="link_to_project2" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Add more project slides as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER  -->
     <div class="footer">
         &copy; Neema. All Rights Reserved. 2024 Time To Program, Happy Coding
-        <!-- <div class="social-icons">
-          <a href="https://x.com/GracePeter1212" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://web.facebook.com/angel.wesley.564/" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/a.n.g.e.l_w.e.s/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/neema-mwende-2089a8273/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/NeemaMwende/" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </div> -->
-      </div>
-      <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Load Font Awesome icons -->  
-
-
+    </div>
     <script>
+        const skillsData = {
+            "Frontend": ["HTML", "CSS", "JavaScript", "React", "Angular"],
+            "Backend": ["Node.js", "Express", "Django", "Flask"],
+            "Databases": ["MongoDB", "MySQL", "PostgreSQL"],
+            "Others": ["Git", "Docker", "AWS"]
+        };
+        const experienceData = [
+            {
+                title: "Software Engineer",
+                date: "Jan 2021 - Present",
+                responsibilities: [
+                    "Developed web applications using React and Node.js.",
+                    "Collaborated with cross-functional teams to define, design, and ship new features.",
+                    "Maintained code quality through unit testing and code reviews."
+                ]
+            },
+            {
+                title: "Junior Developer",
+                date: "Jun 2019 - Dec 2020",
+                responsibilities: [
+                    "Assisted in developing and maintaining the company website.",
+                    "Worked with senior developers to implement new features.",
+                    "Participated in regular code reviews and team meetings."
+                ]
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillsContainer = document.getElementById('skills');
+            Object.keys(skillsData).forEach(category => {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'skills-category';
+                const categoryTitle = document.createElement('h6');
+                categoryTitle.textContent = category;
+                categoryDiv.appendChild(categoryTitle);
+                const skillsList = document.createElement('ul');
+                skillsData[category].forEach(skill => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = skill;
+                    skillsList.appendChild(listItem);
+                });
+                categoryDiv.appendChild(skillsList);
+                skillsContainer.appendChild(categoryDiv);
+            });
+
+            const experienceContainer = document.getElementById('experience-slider');
+            experienceData.forEach(details => {
+                const card = document.createElement('div');
+                card.className = 'work-experience-card';
+
+                const title = document.createElement('h6');
+                title.textContent = details.title;
+
+                const date = document.createElement('div');
+                date.className = 'work-duration';
+                date.textContent = details.date;
+
+                const ul = document.createElement('ul');
+                details.responsibilities.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+
+                card.appendChild(title);
+                card.appendChild(date);
+                card.appendChild(ul);
+
+                experienceContainer.appendChild(card);
+            });
+        });
+
         function toggleMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
             const isOpen = mobileMenu.classList.contains('active');
@@ -195,6 +230,27 @@
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+            $('.arrow-right').click(function(){
+                $('.slider').slick('slickNext');
+            });
+
+            $('.arrow-left').click(function(){
+                $('.slider').slick('slickPrev');
+            });
+        });
     </script>
 </body>
 </html>
