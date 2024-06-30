@@ -738,4 +738,25 @@ Bio  */
     }
   }
 
-  
+  /* footer */
+  .footer {
+    font-size: 0.8rem;
+    text-align: center;
+    background: linear-gradient(98deg, #3d3072 0%, #423477 100%);
+    padding: 1rem;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}

@@ -122,3 +122,31 @@ export const PROJECTS = [
     { name: 'Hotel App', description: 'A Hotel coffee App designed to showcase the different variaties of the brands of coffee.' 
             , image: image9, link: 'https://coffee-app-chi.vercel.app/' },
   ];
+
+  const skillsData = [
+    {
+      skill: "JavaScript",
+      level: "Intermediate",
+      percentage: 75,
+      icon: "https://via.placeholder.com/40"
+    },
+    {
+      skill: "Python",
+      level: "Advanced",
+      percentage: 85,
+      icon: "https://via.placeholder.com/40"
+    },
+    {
+      skill: "React",
+      level: "Intermediate",
+      percentage: 70,
+      icon: "https://via.placeholder.com/40"
+    },
+    {
+      skill: "Node.js",
+      level: "Intermediate",
+      percentage: 65,
+      icon: "https://via.placeholder.com/40"
+    }
+  ];
+  
