@@ -83,6 +83,78 @@
       <script src="data.js"></script>
       <script src="scripts.js"></script>
 
+    <!-- WORK EXPERIENCE  -->
+    <section id="work-section" class="experience-container">
+        <div class="sliding-card">
+          <h5>Work Experience</h5>
+        </div>
+        <div class="sliding-card">
+          <div class="experience-content">
+            <div class="arrows">
+              <div class="arrow-right">&gt;</div>
+              <div class="arrow-left">&lt;</div>
+            </div>
+            <div class="slider">
+              <!-- Assuming ExperienceCard equivalent static HTML goes here -->
+              <div class="experience-card">
+                <!-- Replace with actual experience details -->
+                <h3>Job Title</h3>
+                <p>Company</p>
+                <p>Duration</p>
+                <p>Description</p>
+              </div>
+              <div class="experience-card">
+                <!-- Replace with actual experience details -->
+                <h3>Job Title</h3>
+                <p>Company</p>
+                <p>Duration</p>
+                <p>Description</p>
+              </div>
+              <!-- Add more experience cards as needed -->
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('.slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [
+              {
+                breakpoint: 1025,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+    
+          $('.arrow-right').click(function(){
+            $('.slider').slick('slickNext');
+          });
+    
+          $('.arrow-left').click(function(){
+            $('.slider').slick('slickPrev');
+          });
+        });
+      </script>
+
     <!-- FOOTER  -->
     <div class="footer">
         &copy; Neema. All Rights Reserved. 2024 Time To Program, Happy Coding
@@ -105,6 +177,7 @@
         </div> -->
       </div>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Load Font Awesome icons -->  
+
 
     <script>
         function toggleMenu() {
